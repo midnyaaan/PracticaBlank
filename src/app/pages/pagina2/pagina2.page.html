@@ -23,7 +23,27 @@
 ></ion-img>
 
 
+<div class="container">
+  <div class="track">
+    <ion-card id="card" button="true">
+      <ion-card-content>Card</ion-card-content>
+    </ion-card>
+  </div>
+
+  <p>mueva la barra</p>
+</div>
+
+<ion-item *ngFor="let x of numeros" >
+  <ion-label>{{numeros |slice:0:3 }} - {{decimal | number}} - {{Nombre | lowercase}}  - {{apellido | uppercase}} - {{edad}}</ion-label>
+</ion-item>
+
+
 <ion-button [routerLink]="['/pagina1']">pagina1</ion-button>
+
+<mat-progress-bar mode="query"></mat-progress-bar>
+
+
+
 
 
 </ion-content>

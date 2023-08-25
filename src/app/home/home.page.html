@@ -53,11 +53,29 @@
  
     <app-componente1 nombre="Dylan"></app-componente1>
 
+    <ion-item *ngFor="let x of lista">
+
+      <ion-label>{{ x.nombreU | uppercase}} - {{ x.edadU}}</ion-label>
+  
+    </ion-item>
+   
+
+
+    <mat-spinner></mat-spinner>
 
   </div>
- 
 
 
+
+
+
+
+
+
+
+
+
+  
 
 
 </ion-content>

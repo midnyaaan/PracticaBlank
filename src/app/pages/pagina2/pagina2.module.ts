@@ -8,13 +8,18 @@ import { Pagina2PageRoutingModule } from './pagina2-routing.module';
 
 import { Pagina2Page } from './pagina2.page';
 
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Pagina2PageRoutingModule
+    Pagina2PageRoutingModule,
+    MatProgressBarModule
   ],
   declarations: [Pagina2Page]
 })
 export class Pagina2PageModule {}
+
+
