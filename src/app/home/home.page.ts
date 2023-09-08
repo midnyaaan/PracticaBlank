@@ -3,6 +3,7 @@ import { NavigationExtras, Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -14,7 +15,7 @@ export class HomePage {
   nombre: string ="Dylan";
   edad = 19;
   user1: string = "";
-
+  variableStorage: any ="";
 
   //   varible tipo arreglo
   lista : any =[
@@ -26,7 +27,11 @@ export class HomePage {
   ]
 
 
-  constructor(private router:Router, private alertController: AlertController, private toastController: ToastController) {}
+  constructor(private router:Router, private alertController: AlertController, private toastController: ToastController) {
+    localStorage.setItem('token', this.nombre);
+  }
+
+ 
  
   //alerta una en todo el proyecto
   async presentAlert() {
@@ -74,5 +79,9 @@ export class HomePage {
     this.presentToast('bottom');
     this.router.navigate(['/pagina1'], navigationExtras);
   }
+
+  //ngOninit(){
+    //this.variableStorage = localStorage.getItem('token')
+    //}
  
 }
